@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  web:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./website:/usr/share/nginx/html
+    restart: unless-stopped
+
+volumes:
+  website:
